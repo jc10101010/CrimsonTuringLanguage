@@ -105,9 +105,6 @@ python PythonTuringClasses.py TuringText.txt <tape_input>
 00000011111111111111111001111111111111111110101001111111111111111111100000010011000110011111111111111111111100111111111111111111010100111111111111111111110000000010001110001111111111111111111110011111111111111111111000000010011110010111111111111111111111001111111111111111111001111111111111111111001111111111111111111111000000
 ```
 
-### Modify the Tape
-You can modify the tape by scrolling to the bottom of the Python file (`PythonTuringClasses.py`) and updating the content of `EXAMPLE_TAPE` as necessary.
-
 ---
 
 ## Extendability: What's Next?
@@ -117,5 +114,5 @@ This project can be extended to perform more complex tasks:
   ```plaintext
   12 * (2 / (2 - (3 + 23)))
   ```
-- **Storage and Loops**: You can implement variable storage and loops.
+- **Storage and Loops**: Complex loops and multiple data type variable storage can be implemented.
 
