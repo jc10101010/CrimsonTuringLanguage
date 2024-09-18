@@ -1,0 +1,44 @@
+define i 01111111111111111110
+define ie 011111111111111111110
+define bs 0111111111111111111110
+define be 01111111111111111111110
+define ps 0111111111111111110
+define pe 011111111111111111111110
+define au 010
+define add 010
+startState 1 1 R STOP     0 0 R Hub_
+InPlaceHub 1 1 L Hub_ 0 0 L Hub_
+
+Hub_ 1 1 R Hub_    0 0 R Hub0_
+Hub0_ 1 1 R Hub01_      0 0 R InPlaceHub
+Hub01_ 1 1 R Hub011_      0 0 R TuringArithmetic
+Hub011_ 1 1 R Hub0111_      0 0 R InPlaceHub
+Hub0111_ 1 1 R Hub01111_      0 0 R InPlaceHub
+Hub01111_ 1 1 R Hub011111_      0 0 R InPlaceHub
+Hub011111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub01111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub011111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub0111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub01111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub011111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub0111111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub01111111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub011111111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub0111111111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub01111111111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub011111111111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub0111111111111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub01111111111111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub011111111111111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub0111111111111111111111_ 1 1 R InPlaceHub    0 0 R InPlaceHub
+Hub01111111111111111111111_ 1 1 R InPlaceHub    0 0 R STOP
+
+endFunction sdetect i L endFunction.2
+endFunction.2 out 00000000000000000000 R endFunction.3
+endFunction.3 detect ie R endFunction.4
+endFunction.4 out 000000000000000000000 L endFunction.5
+endFunction.5 detect ps L InPlaceHub
+
+
+
+include TuringArithmetic.txt

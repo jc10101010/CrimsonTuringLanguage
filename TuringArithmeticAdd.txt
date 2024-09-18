@@ -1,0 +1,126 @@
+
+TuringArithmeticAdd 1 1 L StartAdding.1   0 0 L StartAdding.1
+
+StartAdding.1 detect bs R StartAdding.2
+StartAdding.2 skip 15 R AddFirstDigit.1
+AddFirstDigit.1 1 1 L AddFirstDigit.2       0 0 L AddSecondDigit.1
+AddFirstDigit.2 detect bs R AddFirstDigit.3
+AddFirstDigit.3 skip 15 R AddFirstDigit.4
+AddFirstDigit.4 1 0 L AddFirstDigit.4      0 1 L AddFirstDigit.5
+AddFirstDigit.5 detect be L AddFirstDigit.6
+AddFirstDigit.6 skip 1 L AddSecondDigit.1
+
+AddSecondDigit.1 1 1 L AddSecondDigit.2       0 0 L AddThirdDigit.1
+AddSecondDigit.2 detect bs R AddSecondDigit.3
+AddSecondDigit.3 skip 14 R AddSecondDigit.4
+AddSecondDigit.4 1 0 L AddSecondDigit.4      0 1 L AddSecondDigit.5
+AddSecondDigit.5 detect be L AddSecondDigit.6
+AddSecondDigit.6 skip 2 L AddThirdDigit.1
+
+AddThirdDigit.1 1 1 L AddThirdDigit.2       0 0 L AddFourthDigit.1
+AddThirdDigit.2 detect bs R AddThirdDigit.3
+AddThirdDigit.3 skip 13 R AddThirdDigit.4
+AddThirdDigit.4 1 0 L AddThirdDigit.4      0 1 L AddThirdDigit.5
+AddThirdDigit.5 detect be L AddThirdDigit.6
+AddThirdDigit.6 skip 3 L AddFourthDigit.1
+
+AddFourthDigit.1 1 1 L AddFourthDigit.2       0 0 L AddFifthDigit.1
+AddFourthDigit.2 detect bs R AddFourthDigit.3
+AddFourthDigit.3 skip 12 R AddFourthDigit.4
+AddFourthDigit.4 1 0 L AddFourthDigit.4      0 1 L AddFourthDigit.5
+AddFourthDigit.5 detect be L AddFourthDigit.6
+AddFourthDigit.6 skip 4 L AddFifthDigit.1
+
+AddFifthDigit.1 1 1 L AddFifthDigit.2       0 0 L AddSixthDigit.1
+AddFifthDigit.2 detect bs R AddFifthDigit.3
+AddFifthDigit.3 skip 11 R AddFifthDigit.4
+AddFifthDigit.4 1 0 L AddFifthDigit.4      0 1 L AddFifthDigit.5
+AddFifthDigit.5 detect be L AddFifthDigit.6
+AddFifthDigit.6 skip 5 L AddSixthDigit.1
+
+AddSixthDigit.1 1 1 L AddSixthDigit.2       0 0 L AddSeventhDigit.1
+AddSixthDigit.2 detect bs R AddSixthDigit.3
+AddSixthDigit.3 skip 10 R AddSixthDigit.4
+AddSixthDigit.4 1 0 L AddSixthDigit.4      0 1 L AddSixthDigit.5
+AddSixthDigit.5 detect be L AddSixthDigit.6
+AddSixthDigit.6 skip 6 L AddSeventhDigit.1
+
+AddSeventhDigit.1 1 1 L AddSeventhDigit.2       0 0 L AddEighthDigit.1
+AddSeventhDigit.2 detect bs R AddSeventhDigit.3
+AddSeventhDigit.3 skip 9 R AddSeventhDigit.4
+AddSeventhDigit.4 1 0 L AddSeventhDigit.4      0 1 L AddSeventhDigit.5
+AddSeventhDigit.5 detect be L AddSeventhDigit.6
+AddSeventhDigit.6 skip 7 L AddEighthDigit.1
+
+AddEighthDigit.1 1 1 L AddEighthDigit.2       0 0 L AddNinthDigit.1
+AddEighthDigit.2 detect bs R AddEighthDigit.3
+AddEighthDigit.3 skip 8 R AddEighthDigit.4
+AddEighthDigit.4 1 0 L AddEighthDigit.4      0 1 L AddEighthDigit.5
+AddEighthDigit.5 detect be L AddEighthDigit.6
+AddEighthDigit.6 skip 8 L AddNinthDigit.1
+
+
+AddNinthDigit.1 1 1 L AddNinthDigit.2       0 0 L AddTenthDigit.1
+AddNinthDigit.2 detect bs R AddNinthDigit.3
+AddNinthDigit.3 skip 7 R AddNinthDigit.4
+AddNinthDigit.4 1 0 L AddNinthDigit.4      0 1 L AddNinthDigit.5
+AddNinthDigit.5 detect be L AddNinthDigit.6
+AddNinthDigit.6 skip 9 L AddTenthDigit.1
+
+AddTenthDigit.1 1 1 L AddTenthDigit.2       0 0 L AddEleventhDigit.1
+AddTenthDigit.2 detect bs R AddTenthDigit.3
+AddTenthDigit.3 skip 6 R AddTenthDigit.4
+AddTenthDigit.4 1 0 L AddTenthDigit.4      0 1 L AddTenthDigit.5
+AddTenthDigit.5 detect be L AddTenthDigit.6
+AddTenthDigit.6 skip 10 L AddEleventhDigit.1
+
+AddEleventhDigit.1 1 1 L AddEleventhDigit.2       0 0 L AddTwelfthDigit.1
+AddEleventhDigit.2 detect bs R AddEleventhDigit.3
+AddEleventhDigit.3 skip 5 R AddEleventhDigit.4
+AddEleventhDigit.4 1 0 L AddEleventhDigit.4      0 1 L AddEleventhDigit.5
+AddEleventhDigit.5 detect be L AddEleventhDigit.6
+AddEleventhDigit.6 skip 11 L AddTwelfthDigit.1
+
+AddTwelfthDigit.1 1 1 L AddTwelfthDigit.2       0 0 L AddThirteenthDigit.1
+AddTwelfthDigit.2 detect bs R AddTwelfthDigit.3
+AddTwelfthDigit.3 skip 4 R AddTwelfthDigit.4
+AddTwelfthDigit.4 1 0 L AddTwelfthDigit.4      0 1 L AddTwelfthDigit.5
+AddTwelfthDigit.5 detect be L AddTwelfthDigit.6
+AddTwelfthDigit.6 skip 12 L AddThirteenthDigit.1
+
+AddThirteenthDigit.1 1 1 L AddThirteenthDigit.2       0 0 L AddFourteenthDigit.1
+AddThirteenthDigit.2 detect bs R AddThirteenthDigit.3
+AddThirteenthDigit.3 skip 3 R AddThirteenthDigit.4
+AddThirteenthDigit.4 1 0 L AddThirteenthDigit.4      0 1 L AddThirteenthDigit.5
+AddThirteenthDigit.5 detect be L AddThirteenthDigit.6
+AddThirteenthDigit.6 skip 13 L AddFourteenthDigit.1
+
+AddFourteenthDigit.1 1 1 L AddFourteenthDigit.2       0 0 L AddFifteenthDigit.1
+AddFourteenthDigit.2 detect bs R AddFourteenthDigit.3
+AddFourteenthDigit.3 skip 2 R AddFourteenthDigit.4
+AddFourteenthDigit.4 1 0 L AddFourteenthDigit.4      0 1 L AddFourteenthDigit.5
+AddFourteenthDigit.5 detect be L AddFourteenthDigit.6
+AddFourteenthDigit.6 skip 14 L AddFifteenthDigit.1
+
+AddFifteenthDigit.1 1 1 L AddFifteenthDigit.2       0 0 L AddSixteenthDigit.1
+AddFifteenthDigit.2 detect bs R AddFifteenthDigit.3
+AddFifteenthDigit.3 0 0 R AddFifteenthDigit.4       1 1 R AddFifteenthDigit.4
+AddFifteenthDigit.4 1 0 L AddFifteenthDigit.4      0 1 L AddFifteenthDigit.5
+AddFifteenthDigit.5 detect be L AddFifteenthDigit.6
+AddFifteenthDigit.6 skip 15 L AddSixteenthDigit.1
+
+AddSixteenthDigit.1 1 1 L AddSixteenthDigit.2       0 0 R AfterAddedDigit.1
+AddSixteenthDigit.2 detect bs R AddSixteenthDigit.3
+AddSixteenthDigit.4 1 0 L AddSixteenthDigit.4      0 1 L AddSixteenthDigit.5
+AddSixteenthDigit.5 detect be L AddSixteenthDigit.6
+AddSixteenthDigit.6 skip 16 R AfterAddedDigit.1
+
+AfterAddedDigit.1 detect bs L AfterAddedDigit.2
+AfterAddedDigit.2 out 00000000000000000000000000000000000000000000000000000000000000 R AfterAddedDigit.3
+AfterAddedDigit.3 detect add L AfterAddedDigit.4
+AfterAddedDigit.4 skip 1 R AfterAddedDigit.5
+AfterAddedDigit.5 out 000 R AfterAddedDigit.6
+AfterAddedDigit.6 detect au L AfterAddedDigit.7
+AfterAddedDigit.7 skip 1 R AfterAddedDigit.8
+AfterAddedDigit.8 out 000 R AfterAddedDigit.9
+AfterAddedDigit.9 1 1 R endFunction 0 0 R endFunction

@@ -1,0 +1,12 @@
+TuringArithmetic 1 1 L AritDet_     0 0 L AritDet_
+InPlaceAritDet 1 1 L AritDet_ 0 0 L AritDet_
+
+AritDet_ 1 1 R AritDet_    0 0 R AritDet0_
+AritDet0_ 1 1 R AritDet01_      0 0 R InPlaceAritDet
+AritDet01_ 1 1 R AritDet011_      0 0 R TuringArithmeticAdd
+AritDet011_ 1 1 R AritDet0111_      0 0 R TuringArithmeticSubtract
+AritDet0111_ 1 1 R AritDet01111_      0 0 R InPlaceAritDet
+AritDet01111_ 1 1 R AritDet011111_      0 0 R InPlaceAritDet
+AritDet011111_ 1 1 R InPlaceAritDet    0 0 R InPlaceHub
+include TuringArithmeticAdd.txt
+include TuringArithmeticSubtract.txt

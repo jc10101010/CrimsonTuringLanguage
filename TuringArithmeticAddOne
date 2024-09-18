@@ -1,0 +1,23 @@
+TuringArithmeticAdd 1 1 L AddOneToLeft.1    0 0 L AddOneToLeft.1
+
+AddOneToLeft.1 detect bs R AddOneToLeft.2
+AddOneToLeft.2 skip 15 R AddOneToLeft.3.1
+AddOneToLeft.3.1 1 0 L AddOneToLeft.3.2       0 1 L nextStep.1
+AddOneToLeft.3.2 1 0 L AddOneToLeft.3.3       0 1 L nextStep.1
+AddOneToLeft.3.3 1 0 L AddOneToLeft.3.4       0 1 L nextStep.1
+AddOneToLeft.3.4 1 0 L AddOneToLeft.3.5       0 1 L nextStep.1
+AddOneToLeft.3.5 1 0 L AddOneToLeft.3.6       0 1 L nextStep.1
+AddOneToLeft.3.6 1 0 L AddOneToLeft.3.7       0 1 L nextStep.1
+AddOneToLeft.3.7 1 0 L AddOneToLeft.3.8       0 1 L nextStep.1
+AddOneToLeft.3.8 1 0 L AddOneToLeft.3.9       0 1 L nextStep.1
+AddOneToLeft.3.9 1 0 L AddOneToLeft.3.10       0 1 L nextStep.1
+AddOneToLeft.3.10 1 0 L AddOneToLeft.3.11       0 1 L nextStep.1
+AddOneToLeft.3.11 1 0 L AddOneToLeft.3.12       0 1 L nextStep.1
+AddOneToLeft.3.12 1 0 L AddOneToLeft.3.13       0 1 L nextStep.1
+AddOneToLeft.3.13 1 0 L AddOneToLeft.3.14       0 1 L nextStep.1
+AddOneToLeft.3.14 1 0 L AddOneToLeft.3.15       0 1 L nextStep.1
+AddOneToLeft.3.15 1 0 L AddOneToLeft.3.16       0 1 L nextStep.1
+AddOneToLeft.3.16 1 0 L STOP       0 1 L nextStep.1
+nextStep.1 1 1 R nextStep.2     0 0 R nextStep.2
+nextStep.2 detect bs L nextStep.3
+nextStep.3 skip 23 R AddOneToLeft.2

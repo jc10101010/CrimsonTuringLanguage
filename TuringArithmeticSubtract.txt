@@ -1,0 +1,11 @@
+
+TuringArithmeticSubtract 1 1 L StartSubtracting.1   0 0 L StartSubtracting.1
+
+StartSubtracting.1 detect bs R StartSubtracting.2
+StartSubtracting.2 skip 15 R SubtractFirstDigit.1
+SubtractFirstDigit.1 1 1 L SubtractFirstDigit.2       0 0 L SubtractSecondDigit.1
+SubtractFirstDigit.2 detect bs R SubtractFirstDigit.3
+SubtractFirstDigit.3 skip 15 R SubtractFirstDigit.4
+SubtractFirstDigit.4 0 1 L SubtractFirstDigit.4      1 0 L SubtractFirstDigit.5
+SubtractFirstDigit.5 detect be L SubtractFirstDigit.6
+SubtractFirstDigit.6 skip 1 L SubtractSecondDigit.1
